@@ -10,7 +10,8 @@
 |  セクション4  |  ----  |
 |  コンポーネントの作成と読み込み  |  create-components  |
 |  svelte-routingの導入  |   add-routing  |
-|  CSSフレームワーク（smelte）の導入  |   add-smelte  |
+|  CSSフレームワーク（smelte）の導入とtailwindcssの概要説明  |   add-smelte  |
+|  tailwindcssベースカラーの設定  |   base-color  |
 |  ヘッダーとフッターをsmelteでスタイリング  |   header-css  |
 
 

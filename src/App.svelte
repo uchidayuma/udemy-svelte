@@ -1,4 +1,5 @@
 <script>
+	import "smelte/src/tailwind.css";
 	export let url = "";
 	import { Router, Link, Route } from "svelte-routing";
 	import Header from './components/Header.svelte';
