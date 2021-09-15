@@ -3,7 +3,12 @@
 *Looking for a shareable component template instead? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
+## ソースコードブランチ対応表
 
+|  レクチャー名  |  ブランチ名  |
+| ---- | ---- |
+|  コンポーネントの作成と読み込み  |  create-components  |
+|  TD  |  TD  |
 ## Smelte
 [ドキュメント](https://smeltejs.com/)
 [tailwindcssドキュメント](https://tailwindcss.com/docs)
