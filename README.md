@@ -7,8 +7,13 @@
 
 |  レクチャー名  |  ブランチ名  |
 | ---- | ---- |
+|  セクション4  |  ----  |
 |  コンポーネントの作成と読み込み  |  create-components  |
-|  TD  |  TD  |
+|  svelte-routingの導入  |   add-routing  |
+|  CSSフレームワーク（smelte）の導入  |   add-smelte  |
+|  ヘッダーとフッターをsmelteでスタイリング  |   header-css  |
+
+
 ## Smelte
 [ドキュメント](https://smeltejs.com/)
 [tailwindcssドキュメント](https://tailwindcss.com/docs)
