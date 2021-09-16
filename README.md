@@ -9,6 +9,7 @@
 |  tailwindcssベースカラーの設定  |   base-color  |
 |  ヘッダーとフッターをsmelteでスタイリング  |   header-css  |
 |  ヘッダーとにロゴとアイコンを設置  |   header-logo  |
+|  ハンバーガーメニューの中身を実装  |   menu-content  |
 
 
 ## Smelte
@@ -23,6 +24,8 @@
 
 ## svelteで使えるアイコンモジュール
 [carbon-icons-svelte](https://github.com/carbon-design-system/carbon-icons-svelte)
+
+[アイコン一覧](https://www.carbondesignsystem.com/guidelines/icons/library/)
 
 # svelte app
 
