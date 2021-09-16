@@ -12,7 +12,8 @@
 |  ハンバーガーメニューの中身を実装  |   menu-content  |
 |  セクション5  |  ----  |
 |  firebaseの準備  |   add-firebase  |
-|  envから環境変数を取得  |  env  |
+|  firebaseの情報をenvファイルから取得できるように変更 |  env  |
+|  googleログインの実装  |   google-login  |
 
 ## コマンド一覧
 
@@ -41,6 +42,11 @@
 [carbon-icons-svelte](https://github.com/carbon-design-system/carbon-icons-svelte)
 
 [アイコン一覧](https://www.carbondesignsystem.com/guidelines/icons/library/)
+
+## Googleログインドキュメント
+[firebase公式](https://firebase.google.com/docs/auth/web/google-signin?hl=ja#web-version-9_4)
+
+
 
 # svelte app
 

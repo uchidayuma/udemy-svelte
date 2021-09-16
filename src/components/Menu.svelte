@@ -2,6 +2,7 @@
   import { Router, Link } from 'svelte-routing';
   import { fly, scale } from 'svelte/transition';
   import { quadOut } from 'svelte/easing';
+  import { signInWithGoogle } from '../helpers/firebase';
 
   export let open;
 </script>
@@ -12,6 +13,7 @@
     <Link class='block' to="/">Home</Link>
     <Link class='block' to="about">About</Link>
     <Link class='block' to="create">Create</Link>  
+    <Link class='block' to="#" on:click={signInWithGoogle}>ログイン</Link>  
   </Router>
   <hr transition:scale={{ duration: 750, easing: quadOut, opacity: 1 }} />
 </nav>
