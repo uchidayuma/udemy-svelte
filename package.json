@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "carbon-icons-svelte": "^10.38.0",
+    "firebase": "^9.0.2",
     "sirv-cli": "^1.0.0",
     "smelte": "^1.1.8",
     "svelte-hamburgers": "^3.0.1",

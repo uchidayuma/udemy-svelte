@@ -10,7 +10,21 @@
 |  ヘッダーとフッターをsmelteでスタイリング  |   header-css  |
 |  ヘッダーとにロゴとアイコンを設置  |   header-logo  |
 |  ハンバーガーメニューの中身を実装  |   menu-content  |
+|  svelteとfirebaseを連携する  |   add-firebase  |
 
+## コマンド一覧
+
+- npm i --save-dev dotenv @rollup/plugin-replace
+- npm i firebase@9.*
+- npm i svelte-routing
+- npm i dayj
+
+npm i --save-dev dotenv @rollup/plugin-replace
+- npm i smelte
+- npm i @tailwindcss/forms
+- npm i svelte-hamburgers
+- npm i carbon-icons-svelte
+- npm i svelte-star-rating
 
 ## Smelte
 [ドキュメント](https://smeltejs.com/)
