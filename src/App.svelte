@@ -8,6 +8,7 @@
 	import Create from './components/Create.svelte';
 	import Diary from './components/Diary.svelte';
 	import About from './components/About.svelte';
+	import './helpers/firebase';
 </script>
 
 <main class='bg-background-500'>

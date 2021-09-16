@@ -5,13 +5,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyARtVgffcnb6Px_gFoY0QoUbz9V49JvshU",
-  authDomain: "svelte-diary-754f7.firebaseapp.com",
-  projectId: "svelte-diary-754f7",
-  storageBucket: "svelte-diary-754f7.appspot.com",
-  messagingSenderId: "867169747830",
-  appId: "1:867169747830:web:40e734955763d7ea5c7057"
+  apiKey: FIREBASE_API_KEY,
+  authDomain: FIREBASE_AUTH_DOMAIN,
+  projectId: FIREBASE_PROJECT_ID,
+  storageBucket: FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: FIREBASE_MESSAGING_SENDER_ID,
+  appId: FIREBASE_APP_ID 
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+console.log(app);
