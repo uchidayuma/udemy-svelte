@@ -20,6 +20,7 @@
   "dependencies": {
     "sirv-cli": "^1.0.0",
     "smelte": "^1.1.8",
+    "svelte-hamburgers": "^3.0.1",
     "svelte-routing": "^1.6.0"
   }
 }
