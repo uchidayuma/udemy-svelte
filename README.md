@@ -10,7 +10,9 @@
 |  ヘッダーとフッターをsmelteでスタイリング  |   header-css  |
 |  ヘッダーとにロゴとアイコンを設置  |   header-logo  |
 |  ハンバーガーメニューの中身を実装  |   menu-content  |
-|  svelteとfirebaseを連携する  |   add-firebase  |
+|  セクション5  |  ----  |
+|  firebaseの準備  |   add-firebase  |
+|  envから環境変数を取得  |  env  |
 
 ## コマンド一覧
 
@@ -18,8 +20,7 @@
 - npm i firebase@9.*
 - npm i svelte-routing
 - npm i dayj
-
-npm i --save-dev dotenv @rollup/plugin-replace
+- npm i npm install dotenv @rollup/plugin-replace
 - npm i smelte
 - npm i @tailwindcss/forms
 - npm i svelte-hamburgers
