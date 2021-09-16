@@ -22,6 +22,7 @@
     "carbon-icons-svelte": "^10.38.0",
     "dotenv": "^10.0.0",
     "firebase": "^9.0.2",
+    "js-cookie": "^3.0.1",
     "sirv-cli": "^1.0.0",
     "smelte": "^1.1.8",
     "svelte-hamburgers": "^3.0.1",
