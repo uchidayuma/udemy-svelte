@@ -8,6 +8,7 @@
 |  CSSフレームワーク（smelte）の導入とtailwindcssの概要説明  |   add-smelte  |
 |  tailwindcssベースカラーの設定  |   base-color  |
 |  ヘッダーとフッターをsmelteでスタイリング  |   header-css  |
+|  ヘッダーとにロゴとアイコンを設置  |   header-logo  |
 
 
 ## Smelte
@@ -16,6 +17,9 @@
 
 ## カラー設定
 [colorhunt](https://colorhunt.co/palette/79b4b7fefbf3f8f0df9d9d9d)
+
+## Svelte-hanbargers
+[npmモジュール](https://www.npmjs.com/package/svelte-hamburgers)
 
 ## svelteで使えるアイコンモジュール
 [carbon-icons-svelte](https://github.com/carbon-design-system/carbon-icons-svelte)
