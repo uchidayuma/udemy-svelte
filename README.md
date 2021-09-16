@@ -1,8 +1,3 @@
-*Psst — looking for a more complete solution? Check out [SvelteKit](kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.*
-
-*Looking for a shareable component template instead? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
-
----
 ## ソースコードブランチ対応表
 
 |  レクチャー名  |  ブランチ名  |
@@ -18,6 +13,9 @@
 ## Smelte
 [ドキュメント](https://smeltejs.com/)
 [tailwindcssドキュメント](https://tailwindcss.com/docs)
+
+## カラー設定
+[colorhunt](https://colorhunt.co/palette/79b4b7fefbf3f8f0df9d9d9d)
 
 ## svelteで使えるアイコンモジュール
 [carbon-icons-svelte](https://github.com/carbon-design-system/carbon-icons-svelte)
