@@ -14,6 +14,7 @@
 |  firebaseの準備  |   add-firebase  |
 |  firebaseの情報をenvファイルから取得できるように変更 |  env  |
 |  googleログインの実装  |   google-login  |
+|  storeでログイン情報を保管  |   create-store  |
 
 ## コマンド一覧
 
@@ -26,6 +27,7 @@
 - npm i @tailwindcss/forms
 - npm i svelte-hamburgers
 - npm i carbon-icons-svelte
+- npm i js-cookie
 - npm i svelte-star-rating
 
 ## Smelte

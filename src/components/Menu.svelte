@@ -3,12 +3,19 @@
   import { fly, scale } from 'svelte/transition';
   import { quadOut } from 'svelte/easing';
   import { signInWithGoogle } from '../helpers/firebase';
+  import { userId } from '../store';
+  let uid;
+
+  userId.subscribe( id => {
+    uid = id;
+  })
 
   export let open;
 </script>
 
 {#if open}
 <nav class='bg-primary-900' on:click={() => open = false}>
+  {uid}
   <Router>
     <Link class='block' to="/">Home</Link>
     <Link class='block' to="about">About</Link>

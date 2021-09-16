@@ -1,8 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { userId } from '../store';
+import Cookies from 'js-cookie';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -28,7 +28,9 @@ export const signInWithGoogle = () => {
       const token = credential.accessToken;
       // The signed-in user info.
       const user = result.user;
+      userId.set(result.user.uid);
       console.log(user);
+      Cookies.set('uid', result.user.uid);
       // ...
     }).catch((error) => {
       // Handle Errors here.
