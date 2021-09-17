@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import { userId } from '../store';
 import Cookies from 'js-cookie';
 
@@ -43,3 +43,14 @@ export const signInWithGoogle = () => {
       // ...
     });
 } 
+
+export const googleSignOut = () => {
+  signOut(auth).then(() => {
+    // Cookieを削除
+    Cookies.remove('uid');
+    // 画面を更新
+    document.location.reload();
+  }).catch((error) => {
+    alert('ログアウトできませんでした。通信環境の良い場所で再度実行してください。')
+  });
+}

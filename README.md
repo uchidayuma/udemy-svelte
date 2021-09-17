@@ -15,6 +15,7 @@
 |  firebaseの情報をenvファイルから取得できるように変更 |  env  |
 |  googleログインの実装  |   google-login  |
 |  storeでログイン情報を保管  |   create-store  |
+|  ログアウト機能の実装  |   logout  |
 
 ## コマンド一覧
 
@@ -48,7 +49,8 @@
 ## Googleログインドキュメント
 [firebase公式](https://firebase.google.com/docs/auth/web/google-signin?hl=ja#web-version-9_4)
 
-
+## js-cookir
+[ドキュメント](https://www.npmjs.com/package/js-cookie)
 
 # svelte app
 
