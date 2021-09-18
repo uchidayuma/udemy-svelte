@@ -16,7 +16,9 @@
 |  googleログインの実装  |   google-login  |
 |  storeでログイン情報を保管  |   create-store  |
 |  ログアウト機能の実装  |   logout  |
-|  日記作成画面の作成  |   diary-create-u  |
+|  日記作成画面の作成  |   diary-create-ui  |
+|  日記作成画面からデータを送信  |   create-form  |
+|  日記をfirestoreへ保存  |   create-form  |
 
 ## コマンド一覧
 
