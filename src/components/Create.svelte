@@ -10,14 +10,14 @@
   let rate = 5;
   let body = '';
 
-  const submit = () => {
+  const submit = async() => {
     if( body.length < 10 ){
       alert('日記の内容は10文字以上書いてください');
       return false;
     }
     console.log('submit!')
     console.log(uid, rate, body);
-    const result = postDiary(uid, body, rate);
+    const result = await postDiary(uid, body, rate);
     if(!result){
       alert('日記の追加が失敗しました。');
     }else{
