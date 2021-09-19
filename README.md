@@ -19,6 +19,8 @@
 |  日記作成画面の作成  |   diary-create-ui  |
 |  日記作成画面からデータを送信  |   create-form  |
 |  日記をfirestoreへ保存  |   create-form  |
+|  セクション6  |  ----  |
+|  firestoreからデータを取得  |  fetch  |
 
 ## コマンド一覧
 
