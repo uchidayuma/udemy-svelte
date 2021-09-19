@@ -1,20 +1,24 @@
 <script>
   import { onMount } from 'svelte';
   import { Slider, TextField, Button, ProgressCircular } from "smelte";
-  import { getDiary } from '../helpers/api';
+  import { getDiary, updateDiary } from '../helpers/api';
   import dayjs from 'dayjs';
   export let id;
-  console.log(id);
   let promise = getDiary();
   let rate, body;
   onMount( async() =>{
     promise = await getDiary(id);
     rate = promise.rate;
     body = promise.body;
-    console.log(promise);
   })
-  const submit = () =>{
-    console.log(promise);
+  const submit = async() =>{
+    const returnValue = await updateDiary(id, body, rate);
+    if(returnValue){
+      alert('日記の更新が完了しました。');
+    }else{
+      alert('更新ができませんでした。やり直しでください');
+      document.location.href('/');
+    }
   }
 </script>
 
