@@ -1,4 +1,4 @@
-import { collection, addDoc, query, where, getDocs, orderBy  } from "firebase/firestore";
+import { collection, doc, getDoc, addDoc, query, where, getDocs, orderBy  } from "firebase/firestore";
 import { db } from './firebase';
 import dayjs from 'dayjs';
 
@@ -36,24 +36,17 @@ export const postDiary = async(uid = '', body = '', rate = 1) => {
   // もし追加に成功したら、 trueを返す、失敗ならfalse
   return docRef.id ? true : false;
 }
-export const fetch2 = async(uid) => {
-  console.log(uid);
-  console.log(collection(db, "diaries"));
-  const q = query(collection(db, "diaries"), where("uid", "==", uid), orderBy("createdAt", "desc"));
 
-  const querySnapshot = await getDocs(q);
-  console.log(querySnapshot);
-  let diaries = [];
-  querySnapshot.forEach((doc) => {
-    console.log(doc);
-    // doc.data() is never undefined for query doc snapshots
-    console.log(doc.id, " => ", doc.data());
-    diaries.push({
-      id: doc.id,
-      body: doc.data().body,
-      rate: doc.data().rate,
-      createAt: doc.data().createAt,
-    })
-  });
-  return diaries;
+export const getDiary = async(id = 'test') =>{
+  const docRef = doc(db, "diaries", id);
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    console.log("Document data:", docSnap.data());
+    return docSnap.data();
+  } else {
+    // doc.data() will be undefined in this case
+    console.log("No such document!");
+    return false;
+  }
 }
