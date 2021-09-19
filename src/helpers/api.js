@@ -2,7 +2,7 @@ import { collection, addDoc, query, where, getDocs, orderBy  } from "firebase/fi
 import { db } from './firebase';
 import dayjs from 'dayjs';
 
-export const fetch = async(uid) => {
+export const fetch = async(uid = '') => {
   const q = query(collection(db, "diaries"), where("uid", "==", uid), orderBy("createdAt", "desc"));
 
   const querySnapshot = await getDocs(q);
@@ -15,7 +15,7 @@ export const fetch = async(uid) => {
       body: doc.data().body,
       rate: doc.data().rate,
       image: doc.data().image,
-      createAt: doc.data().createdAt
+      createdAt: doc.data().createdAt
     })
   });
   return diaries;

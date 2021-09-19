@@ -21,6 +21,7 @@
 |  日記をfirestoreへ保存  |   create-form  |
 |  セクション6  |  ----  |
 |  firestoreからデータを取得  |  fetch  |
+|  日記データをレンダリング  |  render  |
 
 ## コマンド一覧
 
