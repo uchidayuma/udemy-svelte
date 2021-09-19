@@ -9,7 +9,7 @@ export const postDiary = async(uid = '', body = '', rate = 1) => {
     rate: rate,
     body: body,
     image: "",
-    createAt: dayjs().format('YYYY/MM/DD HH:mm:ss')
+    createdAt: dayjs().format('YYYY/MM/DD HH:mm:ss')
     // 2021/09/18 09:30:00
   });
   console.log("Document written with ID: ", docRef.id);
