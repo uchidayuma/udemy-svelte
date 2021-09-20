@@ -69,14 +69,39 @@ export const getDiary = async(id = 'test') =>{
   }
 }
 
-export const updateDiary = async(id = '', body = '' , rate = 1, image = '') => {
+export const updateDiary = async(id = '', body = '' , rate = 1, image = null) => {
+  let uploadResult = '';
+  if(image.name){
+    const storageRef = ref(storage);
+    // 拡張子を取得
+    const ext = image.name.split('.').pop();
+    // 画像ファイル名を固定しておく
+    const hashName = Math.random().toString(36).slice(-8);
+    const uploadRef = ref(storageRef, `/images/${hashName}.${ext}`);
+    await uploadBytes(uploadRef, image).then( async function(result) {
+      console.log(result);
+      console.log('Uploaded a blob or file!');
+      // ここでダウンロード（表示）URLを取得
+      await getDownloadURL(uploadRef).then(function(url){
+        uploadResult = url;
+      });
+    })
+  }
   const diaryRef = doc(db, "diaries", id);
   if( !diaryRef ){ return false; }
-  await updateDoc(diaryRef, {
-    body: body,
-    rate: rate,
-    image: "",
-  });
-
+  let updateData;
+  if(image.name){
+    updateData = {
+      body: body,
+      rate: rate,
+      image: uploadResult
+    }
+  }else{
+    updateData = {
+      body: body,
+      rate: rate,
+    }
+  }
+  await updateDoc(diaryRef, updateData);
   return true;
 }
