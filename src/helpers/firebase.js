@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
+import { getStorage } from "firebase/storage"
 import { userId } from '../store';
 import Cookies from 'js-cookie';
 
@@ -18,8 +18,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export const storage = getStorage(app)
 export const db = getFirestore();
-export const storage = getStorage();
 const provider = new GoogleAuthProvider();
 const auth = getAuth();
 

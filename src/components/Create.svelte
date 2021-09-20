@@ -18,7 +18,7 @@
     }
     console.log('submit!')
     console.log(uid, rate, body);
-    const result = await postDiary(uid, body, rate);
+    const result = await postDiary(uid, body, rate, image);
     if(!result){
       alert('日記の追加が失敗しました。');
     }else{
