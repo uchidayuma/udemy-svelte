@@ -26,7 +26,7 @@ export const fetch = async(uid = '') => {
 // Add a new document with a generated id.
 export const postDiary = async(uid = '', body = '', rate = 1, image = null) => {
   let uploadResult = '';
-  if(image){
+  if(image.name){
     const storageRef = ref(storage);
     // 拡張子を取得
     const ext = image.name.split('.').pop();
