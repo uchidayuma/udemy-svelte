@@ -1,5 +1,6 @@
 import { collection, doc, getDoc, addDoc, query, where, getDocs, orderBy, updateDoc  } from "firebase/firestore";
-import { db } from './firebase';
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage"
+import { db, storage } from './firebase';
 import dayjs from 'dayjs';
 
 export const fetch = async(uid = '') => {
@@ -23,12 +24,29 @@ export const fetch = async(uid = '') => {
 
 
 // Add a new document with a generated id.
-export const postDiary = async(uid = '', body = '', rate = 1) => {
+export const postDiary = async(uid = '', body = '', rate = 1, image = null) => {
+  let uploadResult = '';
+  if(image){
+    const storageRef = ref(storage);
+    // 拡張子を取得
+    const ext = image.name.split('.').pop();
+    // 画像ファイル名を固定しておく
+    const hashName = Math.random().toString(36).slice(-8);
+    const uploadRef = ref(storageRef, `/images/${hashName}.${ext}`);
+    await uploadBytes(uploadRef, image).then( async function(result) {
+      console.log(result);
+      console.log('Uploaded a blob or file!');
+      // ここでダウンロード（表示）URLを取得
+      await getDownloadURL(uploadRef).then(function(url){
+        uploadResult = url;
+      });
+    })
+  }
   const docRef = await addDoc(collection(db, "diaries"), {
     uid: uid,
     rate: rate,
     body: body,
-    image: "",
+    image: uploadResult,
     createdAt: dayjs().format('YYYY/MM/DD HH:mm:ss')
     // 2021/09/18 09:30:00
   });
