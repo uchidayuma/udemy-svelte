@@ -30,8 +30,9 @@
 |  firebase storageに画像をアップロード  | upload-storage  |
 |  日記詳細ページに画像を追加  | detail-image  |
 |  画像を更新できるように日記更新機能を改良  | storage-update  |
-|  セクション7  |  ----  |
+|  セクション8  |  ----  |
 |  日記の削除機能  | diary-delete  |
+|  未ログイン時の出し分け  | not-login |
 
 ## コマンド一覧
 
