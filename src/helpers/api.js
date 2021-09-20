@@ -26,12 +26,7 @@ export const fetch = async(uid = '') => {
 // Add a new document with a generated id.
 export const postDiary = async(uid = '', body = '', rate = 1, image = null) => {
   let uploadResult = '';
-<<<<<<< HEAD
   if(image.name){
-=======
-  console.log(image);
-  if(image){
->>>>>>> 45c5107 (WIP)
     const storageRef = ref(storage);
     // 拡張子を取得
     const ext = image.name.split('.').pop();
@@ -75,9 +70,8 @@ export const getDiary = async(id = 'test') =>{
 }
 
 export const updateDiary = async(id = '', body = '' , rate = 1, image = null) => {
-  let uploadResult;
-  console.log(image);
-  if(image){
+  let uploadResult = '';
+  if(image.name){
     const storageRef = ref(storage);
     // 拡張子を取得
     const ext = image.name.split('.').pop();
@@ -96,19 +90,18 @@ export const updateDiary = async(id = '', body = '' , rate = 1, image = null) =>
   const diaryRef = doc(db, "diaries", id);
   if( !diaryRef ){ return false; }
   let updateData;
-  if(image){
-    updateData =  {
+  if(image.name){
+    updateData = {
       body: body,
       rate: rate,
-      image: uploadResult,
-    };
+      image: uploadResult
+    }
   }else{
-    updateData =  {
+    updateData = {
       body: body,
       rate: rate,
-    };
+    }
   }
-  console.log(updateData);
   await updateDoc(diaryRef, updateData);
   return true;
 }

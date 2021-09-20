@@ -12,7 +12,7 @@
     body = promise.body;
   })
   const submit = async() =>{
-    const returnValue = await updateDiary(id, body, rate);
+    const returnValue = await updateDiary(id, body, rate, image);
     if(returnValue){
       alert('日記の更新が完了しました。');
     }else{
