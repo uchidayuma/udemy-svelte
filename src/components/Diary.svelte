@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { Slider, TextField, Button, ProgressCircular } from "smelte";
-  import { getDiary, updateDiary } from '../helpers/api';
+  import { getDiary, updateDiary, deleteDiary } from '../helpers/api';
   import dayjs from 'dayjs';
   export let id;
   let promise = getDiary();
@@ -29,13 +29,23 @@
       preview = e.target.result
     };
   }
+  const deleteHandle = async() => {
+    const result = await deleteDiary(id);
+    if(result){
+      alert('日記の削除が完了しました。');
+      location.href = '/';
+    }else{
+      alert('日記の削除ができませんでした。通信環境の良い場所で再度実行してください');
+      location.href = '/';
+    }
+  }
 </script>
 
 {#await promise}
   <p class='mt-10 flex justify-center'><ProgressCircular /></p>
 {:then diary} 
   <h1 class='h4'>{dayjs(diary.createdAt).format('YYYY年MM月DD日')}の日記</h1>
-  <form on:submit|preventDefault={submit} class='p-5'>
+  <form on:submit|preventDefault={submit} class='p-5 mb-10'>
     {#if !preview}
       <img class='mb-4' src={diary.image ? diary.image : '/dummy.jpeg'} alt='diary'/>
     {:else}
@@ -48,4 +58,5 @@
     <TextField label="日記の本文（変更する場合は編集）" class="bg-white-900" bind:value={body} textarea rows="5" outlined />
     <Button type='submit' class='text-white-900'>日記を更新</Button>
   </form>
+  <Button class='bg-alert-900 text-white-900 mb-10' on:click={deleteHandle}>日記を削除</Button>
 {/await}

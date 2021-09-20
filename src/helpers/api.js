@@ -1,4 +1,4 @@
-import { collection, doc, getDoc, addDoc, query, where, getDocs, orderBy, updateDoc  } from "firebase/firestore";
+import { collection, doc, getDoc, addDoc, query, where, getDocs, orderBy, updateDoc, deleteDoc  } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"
 import { db, storage } from './firebase';
 import dayjs from 'dayjs';
@@ -103,5 +103,11 @@ export const updateDiary = async(id = '', body = '' , rate = 1, image = null) =>
     }
   }
   await updateDoc(diaryRef, updateData);
+  return true;
+}
+
+export const deleteDiary = async(id) => {
+  if(!id){ return false; }
+  await deleteDoc(doc(db, "diaries", id));
   return true;
 }
