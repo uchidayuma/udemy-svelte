@@ -9,6 +9,7 @@
 
   let rate = 5;
   let body = '';
+  let image, preview = '';
 
   const submit = async() => {
     if( body.length < 10 ){
@@ -29,6 +30,16 @@
   onDestroy( () => {
     unsubscribe;
   })
+
+  const onFileSelect = (e) => {
+    let target = e.target.files[0];
+    image = target;
+    let reader = new FileReader();
+    reader.readAsDataURL(target);
+    reader.onload = e => {
+      preview = e.target.result
+    };
+  }
 </script>
 
 <h3>日記を書こう！</h3>
@@ -36,5 +47,10 @@
   <p class='mb-4'>今日の気分は{rate}点です</p>
   <Slider class='mb-4' min="1" max="10" bind:value={rate} />
   <TextField label="日記の本文" class="bg-white-900" bind:value={body} textarea rows="5" outlined />
+  {#if preview}
+    <img src={preview} alt='preview' class='mb-6' />
+  {/if}
+  <label for='file-input' class='bg-primary-900 text-white-900 px-4 py-3 rounded block w-4/12 m-auto mb-6'>画像を選択</label>
+  <input type='file' accept="image/*" id='file-input' class='hidden' bind:this={image} on:change={(e) => onFileSelect(e)} />
   <Button type='submit' class='text-white-900'>日記を保存</Button>
 </form>
