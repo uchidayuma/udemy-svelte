@@ -36,7 +36,7 @@ export const postDiary = async(uid = '', body = '', rate = 1, image = null) => {
     await uploadBytes(uploadRef, image).then( async function(result) {
       console.log(result);
       console.log('Uploaded a blob or file!');
-      // 公開可能URLを取得
+      // ここでダウンロード（表示）URLを取得
       await getDownloadURL(uploadRef).then(function(url){
         uploadResult = url;
       });

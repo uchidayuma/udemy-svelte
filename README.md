@@ -27,6 +27,8 @@
 |  日記更新機能の作成  |  update  |
 |  セクション7  |  ----  |
 |  日記作成フォームに画像を追加とプレビュー機能の作成  | add-image-form  |
+|  firebase storageに画像をアップロード  | upload-storage  |
+|  日記詳細ページに画像を追加  | detail-image  |
 
 ## コマンド一覧
 
