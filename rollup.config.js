@@ -72,7 +72,8 @@ export default {
 					success: "#4caf50",
 					alert: "#ff9800",
 					blue: "#2196f3",
-					dark: "#212121" 
+					dark: "#212121",
+					gray: "#666666" 
 				}, // Object of colors to generate a palette from, and then all the utility classes
 				darkMode: true, 
 			},

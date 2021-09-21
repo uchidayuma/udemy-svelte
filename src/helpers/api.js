@@ -1,10 +1,21 @@
-import { collection, doc, getDoc, addDoc, query, where, getDocs, orderBy, updateDoc, deleteDoc  } from "firebase/firestore";
+import { collection, doc, getDoc, addDoc, query, where, getDocs, orderBy, limit, updateDoc, deleteDoc  } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"
 import { db, storage } from './firebase';
 import dayjs from 'dayjs';
 
-export const fetch = async(uid = '') => {
-  const q = query(collection(db, "diaries"), where("uid", "==", uid), orderBy("createdAt", "desc"));
+export const fetch = async(uid = '', filterMonth = null) => {
+  let q;
+  if(filterMonth){
+    // filterMonth = 2021-09 → 2021/09/13
+    filterMonth = filterMonth.replace("-", "/");
+    q = query(collection(db, "diaries"),
+      where("uid", "==", uid),
+      where("createdAt", ">=", filterMonth + '/01' ),
+      where("createdAt", "<=", filterMonth + '/31'),
+      limit(31));
+  }else{
+    q = query(collection(db, "diaries"), where("uid", "==", uid), orderBy("createdAt", "desc"), limit(31));
+  }
 
   const querySnapshot = await getDocs(q);
   let diaries = [];

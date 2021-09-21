@@ -2,7 +2,7 @@
 
 |  レクチャー名  |  ブランチ名  |
 | ---- | ---- |
-|  セクション4  |  ----  |
+|  **セクション4**  |  ----  |
 |  コンポーネントの作成と読み込み  |  create-components  |
 |  svelte-routingの導入  |   add-routing  |
 |  CSSフレームワーク（smelte）の導入とtailwindcssの概要説明  |   add-smelte  |
@@ -10,7 +10,7 @@
 |  ヘッダーとフッターをsmelteでスタイリング  |   header-css  |
 |  ヘッダーとにロゴとアイコンを設置  |   header-logo  |
 |  ハンバーガーメニューの中身を実装  |   menu-content  |
-|  セクション5  |  ----  |
+|  **セクション5**  |  ----  |
 |  firebaseの準備  |   add-firebase  |
 |  firebaseの情報をenvファイルから取得できるように変更 |  env  |
 |  googleログインの実装  |   google-login  |
@@ -19,20 +19,21 @@
 |  日記作成画面の作成  |   diary-create-ui  |
 |  日記作成画面からデータを送信  |   create-form  |
 |  日記をfirestoreへ保存  |   create-form  |
-|  セクション6  |  ----  |
+|  **セクション6**  |  ----  |
 |  firestoreからデータを取得  |  fetch  |
 |  日記データをレンダリング  |  render  |
 |  ログイン状態に応じてコンポーネントを出し分ける  |  if-login  |
 |  日記詳細ページの作成  |  get-diary  |
 |  日記更新機能の作成  |  update  |
-|  セクション7  |  ----  |
+|  **セクション7**  |  ----  |
 |  日記作成フォームに画像を追加とプレビュー機能の作成  | add-image-form  |
 |  firebase storageに画像をアップロード  | upload-storage  |
 |  日記詳細ページに画像を追加  | detail-image  |
 |  画像を更新できるように日記更新機能を改良  | storage-update  |
-|  セクション8  |  ----  |
+|  **セクション8**  |  ----  |
 |  日記の削除機能  | diary-delete  |
 |  未ログイン時の出し分け  | not-login |
+|  日記の検索機能 年月で検索 | filter-1 |
 
 ## コマンド一覧
 
