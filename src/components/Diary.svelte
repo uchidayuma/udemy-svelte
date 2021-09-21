@@ -51,12 +51,12 @@
     {:else}
       <img class='mb-4' src={preview} alt='diary'/>
     {/if}
-    <label for='file-input' class='bg-primary-900 text-white-900 px-4 py-3 rounded block w-4/12 m-auto mb-6'>画像を選択</label>
+    <label for='file-input' class='bg-primary-900 text-white-900 dark:bg-accent-900 px-4 py-3 rounded block w-4/12 m-auto mb-6'>画像を選択</label>
     <input type='file' accept="image/*" id='file-input' class='hidden' bind:this={image} on:change={(e) => onFileSelect(e)} />
     <p class='mb-4'>気分は{rate}点です</p>
     <Slider class='mb-4' min="1" max="10" bind:value={rate} />
     <TextField label="日記の本文（変更する場合は編集）" class="bg-white-900" bind:value={body} textarea rows="5" outlined />
-    <Button type='submit' class='text-white-900'>日記を更新</Button>
+    <Button type='submit' class='text-white-900 dark:bg-accent-500'>日記を更新</Button>
   </form>
-  <Button class='bg-alert-900 text-white-900 mb-10' on:click={deleteHandle}>日記を削除</Button>
+  <Button class='bg-alert-900 text-white-900 dark:bg-alert-600 dark-hover:bg-dark-700 mb-10' on:click={deleteHandle}>日記を削除</Button>
 {/await}
