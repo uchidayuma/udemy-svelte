@@ -13,7 +13,7 @@
 
 <main class='bg-background-500'>
 	<Header />
-	<section class='content'>
+	<section class='content p-8'>
 		<Router url="{url}">
 			<Route path="diary/:id" let:params><Diary id={params.id}/></Route>
 			<Route path="create" component="{Create}" />
