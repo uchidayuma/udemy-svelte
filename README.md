@@ -1,3 +1,12 @@
+# 【Svelte.js入門】ReactやVueに挫折した人でも大丈夫！Svelteとfirebaseを使って日記アプリを作りながら学ぶSvelte.js-README
+
+こちらは打田裕馬がUdemyで公開している「【Svelte.js入門】ReactやVueに挫折した人でも大丈夫！...」のリポジトリです。
+
+詳しくは [Udemy](https://www.udemy.com/course/sveltebasic)からご覧ください。
+
+[GitHubリポジトリはこちら](https://github.com/uchidayuma/udemy-svelte)
+
+
 ## ソースコードブランチ対応表
 
 |  レクチャー名  |  ブランチ名  |
@@ -73,7 +82,9 @@
 ## js-cookir
 [ドキュメント](https://www.npmjs.com/package/js-cookie)
 
-# svelte app
+
+
+## svelte公式解説
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
