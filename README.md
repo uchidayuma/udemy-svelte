@@ -6,6 +6,8 @@
 
 [GitHubリポジトリはこちら](https://github.com/uchidayuma/udemy-svelte)
 
+[Svelteチュートリアル](https://svelte.dev/tutorial/basics)
+
 
 ## ソースコードブランチ対応表
 
